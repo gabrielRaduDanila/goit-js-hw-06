@@ -5,8 +5,10 @@ inputMinLegth = Number(inputMinLegth);
 const eventHandler = () => {
   let typedText = validationInput.value;
   if (typedText.length >= inputMinLegth) {
+    validationInput.classList.remove('invalid');
     validationInput.classList.add('valid');
   } else {
+    validationInput.classList.remove('valid');
     validationInput.classList.add('invalid');
   }
 };
