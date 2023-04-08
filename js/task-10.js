@@ -16,6 +16,7 @@ btns.forEach((btn) => {
 });
 
 function createBoxes(amount) {
+  boxesContainer.innerHTML = '';
   let sideSize = 30;
   for (let i = 0; i < amount; i++) {
     createBox(sideSize);
