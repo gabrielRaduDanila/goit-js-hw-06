@@ -25,10 +25,19 @@ galleryTitle.innerHTML = 'Gallery';
 galleryTitle.style.textAlign = 'center';
 gallery.before(galleryTitle);
 gallery.insertAdjacentHTML('afterbegin', galleryItems);
+
+// ==== styles for gallery ====
 const listItems = [...document.querySelectorAll('img')];
 listItems.forEach((item) => {
-  item.style.width = '50%';
+  item.style.width = 'auto';
+  item.style.height = '100%';
+  item.parentElement.style.width = '45%';
+  item.parentElement.style.height = '250px';
+  item.parentElement.style.textAlign = 'center';
 });
-gallery.style.display = 'flex, , flex-wrap:wrap';
+gallery.style.display = 'flex';
+gallery.style.flexWrap = 'wrap';
 gallery.style.listStyle = 'none';
-gallery.style.textAlign = 'center';
+gallery.style.alignItems = 'center';
+gallery.style.justifyContent = 'center';
+gallery.style.gap = '30px';
